@@ -9,7 +9,7 @@ Configuration FileCheckVersion
         Script UpdateConfigurationVersion
         {
             GetScript = {
-                $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE\Users\patrick.purpari\Desktop\ -ChildPath 'version.txt')
+                $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
                 return @{ 'Result' = "$currentVersion" }
             }
             TestScript = {
